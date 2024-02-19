@@ -1,7 +1,7 @@
 package com.example.fintech001.controller;
 
 import com.example.fintech001.service.AccountService;
-import dto.AccountDto;
+import com.example.fintech001.dto.AccountDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

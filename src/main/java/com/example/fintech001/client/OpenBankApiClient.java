@@ -1,6 +1,6 @@
 package com.example.fintech001.client;
 
-import dto.openbank.*;
+import com.example.fintech001.dto.openbank.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpEntity;

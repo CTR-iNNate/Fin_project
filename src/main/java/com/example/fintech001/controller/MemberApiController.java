@@ -1,9 +1,9 @@
 package com.example.fintech001.controller;
 
 import com.example.fintech001.service.MemberService;
-import dto.MemberDto;
-import dto.SignInDto;
-import dto.SignUpDto;
+import com.example.fintech001.dto.MemberDto;
+import com.example.fintech001.dto.SignInDto;
+import com.example.fintech001.dto.SignUpDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

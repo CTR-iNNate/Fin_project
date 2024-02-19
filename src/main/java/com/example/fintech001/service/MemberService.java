@@ -1,22 +1,18 @@
 package com.example.fintech001.service;
 
-import domain.Member;
-import domain.OpenBankToken;
-import dto.MemberDto;
-import dto.SignInDto;
-import dto.SignUpDto;
-import dto.openbank.OpenBankAccountDto;
-import dto.openbank.OpenBankUserInfoRequestDto;
-import dto.openbank.OpenBankUserInfoResponseDto;
-import lombok.Data;
+import com.example.fintech001.domain.Member;
+import com.example.fintech001.domain.OpenBankToken;
+import com.example.fintech001.dto.MemberDto;
+import com.example.fintech001.dto.SignInDto;
+import com.example.fintech001.dto.SignUpDto;
+import com.example.fintech001.dto.openbank.OpenBankUserInfoRequestDto;
+import com.example.fintech001.dto.openbank.OpenBankUserInfoResponseDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repository.MemberRepository;
-import repository.TokenRepository;
-
-import java.util.List;
+import com.example.fintech001.repository.MemberRepository;
+import com.example.fintech001.repository.TokenRepository;
 
 @Service
 @Slf4j

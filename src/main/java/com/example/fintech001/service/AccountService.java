@@ -1,20 +1,19 @@
 package com.example.fintech001.service;
 
-import domain.Account;
-import domain.OpenBankToken;
-import dto.AccountDto;
-import dto.AccountRequestDto;
-import dto.BalanceRequestDto;
-import dto.openbank.OpenBankAccountSearchResponseDto;
-import dto.openbank.OpenBankBalanceResponseDto;
+import com.example.fintech001.domain.Account;
+import com.example.fintech001.domain.OpenBankToken;
+import com.example.fintech001.dto.AccountDto;
+import com.example.fintech001.dto.AccountRequestDto;
+import com.example.fintech001.dto.BalanceRequestDto;
+import com.example.fintech001.dto.openbank.OpenBankAccountSearchResponseDto;
+import com.example.fintech001.dto.openbank.OpenBankBalanceResponseDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repository.AccountRepository;
-import repository.MemberRepository;
-import repository.TokenRepository;
+import com.example.fintech001.repository.AccountRepository;
+import com.example.fintech001.repository.MemberRepository;
+import com.example.fintech001.repository.TokenRepository;
 
 import java.util.Comparator;
 import java.util.HashMap;

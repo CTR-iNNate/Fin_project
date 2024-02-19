@@ -1,8 +1,8 @@
 package com.example.fintech001.controller;
 
 import com.example.fintech001.service.TokenService;
-import dto.OpenBankTokenDto;
-import dto.TokenRequestDto;
+import com.example.fintech001.dto.OpenBankTokenDto;
+import com.example.fintech001.dto.TokenRequestDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

@@ -2,10 +2,10 @@ package com.example.fintech001.service;
 
 import com.example.fintech001.client.OpenBankApiClient;
 import com.example.fintech001.client.OpenBankUtil;
-import dto.AccountRequestDto;
-import dto.BalanceRequestDto;
-import dto.TokenRequestDto;
-import dto.openbank.*;
+import com.example.fintech001.dto.AccountRequestDto;
+import com.example.fintech001.dto.BalanceRequestDto;
+import com.example.fintech001.dto.TokenRequestDto;
+import com.example.fintech001.dto.openbank.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
