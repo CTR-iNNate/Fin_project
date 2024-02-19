@@ -1,0 +1,38 @@
+
+  spring:
+    config:
+      activate:
+        on-profile: openbank-ex
+
+    datasource:
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:~/test
+      username: sa
+      password:
+    h2:
+      console:
+        enabled: true
+        path: /h2-console
+    jpa:
+
+      hibernate:
+        ddl-auto: create-drop
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+  openbank:
+    access-token: "{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiIxMTAxMDQ0OTYyIiwic2NvcGUiOlsiaW5xdWlyeSIsImxvZ2luIiwidHJhbnNmZXIiXSwiaXNzIjoiaHR0cHM6Ly93d3cub3BlbmJhbmtpbmcub3Iua3IiLCJleHAiOjE3MTYxMjQ2MDYsImp0aSI6IjIxYTU0MzY2LTU4YTQtNDQ5ZC1hMWUwLTU0NjE2YTZmMDBhNyJ9.sqwN-aZi3ZmzNVL0UwjJPhe_xaP1BcY8mvsmEC4mbb0}"
+    useCode: "{KOEUzhIHEVNfxuA731d5znqgK8WzAO}"
+    client-id: "{24340178-8da0-4bae-94fc-fc731cd5c200}"
+
+
+
+
+
+
+
+
+
+
+
