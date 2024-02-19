@@ -18,12 +18,7 @@ import org.springframework.web.bind.annotation.*;
     public class TokenApiController {
         private final TokenService tokenService;
 
-        /**
-         * 토큰저장 플로우 -> 프론트에서 오픈뱅킹 인증 끝나고 받은 code를 member id와 함께 백으로 요청
-         * redirect_uri 은 프론트엔드 주소
-         * @param tokenRequestDto
-         * @return
-         */
+
         @PostMapping("members/openbank/token")
         public ResponseEntity saveOpenBankToken(@RequestBody TokenRequestDto tokenRequestDto){
             tokenService.saveOpenBankUserToken(tokenRequestDto);

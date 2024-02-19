@@ -4,6 +4,7 @@ import domain.Member;
 import domain.OpenBankToken;
 import dto.OpenBankTokenDto;
 import dto.TokenRequestDto;
+import dto.openbank.OpenBankResponseToken;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -29,7 +30,7 @@ public class TokenService {
             throw new RuntimeException("이미 토큰이 존재함");
         }
 
-        OpenBankResponseToken openBankResponseToken = openBankService.requestToken(tokenRequestDto);
+       OpenBankResponseToken openBankResponseToken = openBankService.requestToken(tokenRequestDto);
 
         OpenBankToken openBankToken = OpenBankToken.builder()
                 .accessToken(openBankResponseToken.getAccess_token())

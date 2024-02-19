@@ -13,9 +13,7 @@ public class OpenBankToken extends BaseTimeEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    /**
-     member 하나당 오픈뱅킹 사용자 토큰 생성된다.
-     **/
+
     @Column(unique = true)
     private Long memberId;
     @Column(length = 1000)

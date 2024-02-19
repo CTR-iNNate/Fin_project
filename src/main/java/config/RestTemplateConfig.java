@@ -1,13 +1,15 @@
 package config;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
+
 import java.net.http.HttpClient;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
@@ -15,6 +17,9 @@ import java.security.cert.X509Certificate;
 
 @Configuration
 public class RestTemplateConfig {
+
+
+
     @Bean
     public RestTemplate restTemplate() throws NoSuchAlgorithmException, KeyManagementException {
         TrustManager[] trustAllCertificates = new TrustManager[]{
@@ -30,14 +35,14 @@ public class RestTemplateConfig {
                     }
                 }
         };
-        // SSL 컨텍스트를 만들고 TrustManager를 설정
-        SSLContext sslContext = SSLContext.getInstance("TLS");
-        sslContext.init(null, trustAllCertificates, new java.security.SecureRandom());
 
-        // 커스텀 RestTemplate을 만들어 SSL 컨텍스트를 설정
-        HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory();
-        factory.setHttpClient(HttpClient.newBuilder().sslContext(SSLContext.setDefault(sslContext)).build()0);
+        SSLContext ctx = SSLContext.getInstance("TLS");
+        ctx.init(null, trustAllCertificates, new java.security.SecureRandom());
 
-        return new RestTemplate(factory);
+
+
+        HttpClient httpClient = HttpClient.newBuilder().sslContext(ctx).build();
+
+        return new RestTemplate((ClientHttpRequestFactory) httpClient);
     }
 }
