@@ -1,4 +1,4 @@
-package client;
+package com.example.fintech001.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Component;

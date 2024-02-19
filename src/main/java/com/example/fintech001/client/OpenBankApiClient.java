@@ -1,4 +1,4 @@
-package client;
+package com.example.fintech001.client;
 
 import dto.openbank.*;
 import lombok.RequiredArgsConstructor;

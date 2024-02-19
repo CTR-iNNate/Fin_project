@@ -1,7 +1,7 @@
 package com.example.fintech001.service;
 
-import client.OpenBankApiClient;
-import client.OpenBankUtil;
+import com.example.fintech001.client.OpenBankApiClient;
+import com.example.fintech001.client.OpenBankUtil;
 import dto.AccountRequestDto;
 import dto.BalanceRequestDto;
 import dto.TokenRequestDto;
