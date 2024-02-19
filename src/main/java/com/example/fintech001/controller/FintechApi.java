@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Slf4j
 @Controller
 @RequiredArgsConstructor
-public class fintechApi {
+public class FintechApi {
 
     @Value("${openbank.client-id}")
     private String clientId;
